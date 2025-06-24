@@ -4,7 +4,7 @@ import { chromium } from "playwright";
 let browser, context, page;
 
 Given("I open the OrangeHRM login page", { timeout: 30000 }, async function () {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch();
   context = await browser.newContext();
   page = await context.newPage();
   await page.goto("https://opensource-demo.orangehrmlive.com/");
