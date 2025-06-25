@@ -1,10 +1,10 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { chromium } from "playwright";
+import { firefox } from "playwright";
 
 let browser, context, page;
 
 Given("I open the OrangeHRM login page", { timeout: 30000 }, async function () {
-  browser = await chromium.launch();
+  browser = await firefox.launch();
   context = await browser.newContext();
   page = await context.newPage();
   await page.goto("https://opensource-demo.orangehrmlive.com/");
